@@ -51,3 +51,8 @@ class Uint64Test(unittest.TestCase):
     def test___str__(self):
         a = Uint64(2 ** 64 - 1)
         self.assertEqual(str(a), f"Uint64({2 ** 64 - 1})")
+
+    def test___shift__(self):
+        a = Uint64(0xffffffffffffffff)
+        self.assertEqual(a << 1, Uint64(0xfffffffffffffffe))
+        self.assertEqual(a >> 1, Uint64(0x7fffffffffffffff))

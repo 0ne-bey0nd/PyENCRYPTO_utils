@@ -1,5 +1,5 @@
 from os import urandom
-from int_types import Uint64
+from .int_types import Uint64
 
 
 def ceil_log2(x: Uint64) -> int:

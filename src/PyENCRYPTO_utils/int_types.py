@@ -43,14 +43,18 @@ class Uint64(int):
 
     # left shift
     def __lshift__(self, other):
+        return Uint64(self.value << other)
 
+    # right shift
+    def __rshift__(self, other):
+        return Uint64(self.value >> other)
 
     @property
     def value(self):
         return ctypes.c_uint64(self).value
 
-    @property
-    def size(self):
+    @classmethod
+    def size(cls):
         return Uint64(64)
 
 
