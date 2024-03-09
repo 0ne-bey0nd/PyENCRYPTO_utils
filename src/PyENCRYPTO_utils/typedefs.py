@@ -39,11 +39,13 @@ def rem(a: int, b: int) -> int:
 def sub(a: int, b: int, m: int) -> int:
     return (a + m - b) if b > a else (a - b)
 
+FALSE = False
+
+TRUE = True
+
+ZERO_BYTE = 0
+
+MAX_BYTE = 0xFF
 
 if __name__ == '__main__':
-    a = uint64_t(2 ** 64 - 1)
-    b = uint64_t(123)
-    print(a + b)
-    print(a + 1)
-    print(1 + a)
     ...
