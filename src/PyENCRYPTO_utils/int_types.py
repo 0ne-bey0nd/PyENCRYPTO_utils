@@ -5,6 +5,12 @@ class Uint64(int):
     def __new__(cls, value=0):
         return super().__new__(cls, ctypes.c_uint64(value).value)
 
+    def __eq__(self, other):
+        if isinstance(other, Uint64):
+            return self.value == other.value
+        else:
+            return self.value == other
+
     def __add_python_int(self, other: int):
         return super().__add__(other)
 

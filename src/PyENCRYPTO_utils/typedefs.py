@@ -4,7 +4,6 @@ from .utils import ceil_log2
 UGATE_T = Uint64  # 64 bits
 REGISTER_SIZE = Uint64  # 64 bits
 
-
 class SECURITYLEVELS:
     def __init__(self, statbits: int, symbits: int, ifcbits: int):
         self.statbits = statbits
