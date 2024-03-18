@@ -28,8 +28,6 @@ async def main(loop):
         0.1, functools.partial(set_event, event)
     )
 
-
-
     await asyncio.wait([coro1(event), coro2(event)])
     print('event end state: {}'.format(event.is_set()))
 
