@@ -13,6 +13,7 @@ def ceil_log2(x: Uint64) -> int:
     else:
         return (x - 1).bit_length()
 
+
 # uint32_t floor_log2(int bits) {
 # 	if (bits == 1)
 # 		return 1;
@@ -33,6 +34,7 @@ def floor_log2(x: Uint64) -> int:
     else:
         return x.bit_length()
 
+
 def ceil_divide(a: Uint64, b: Uint64) -> Uint64:
     """
     向上取整的除法
@@ -42,12 +44,12 @@ def ceil_divide(a: Uint64, b: Uint64) -> Uint64:
     """
     return (a + b - 1) // b
 
+
 def aby_prng(bitlen: Uint64) -> Uint64:
     byte_count = ceil_divide(bitlen, Uint64(8))
     data = urandom(byte_count)
     rnd = int.from_bytes(data, byteorder='big', signed=False)
     return rnd
-
 
 
 def aby_rand():
